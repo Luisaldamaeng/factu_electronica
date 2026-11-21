@@ -1,0 +1,397 @@
+﻿codigo,estado,validacion,mensaje,observacion,version,pagina_pdf
+0001,,AA01,Certificado de Transmisor Inválido,,,151
+0002,R,AA02,Plazo de validez del Certificado digital,,,151
+0003,,AA03,Cadena de Certificación,,,152
+0004,,AA04,LCR del Certificado Transmisor,,,152
+0005,R,AA05,Certificado del transmisor revocado,,,152
+0006,R,AA06,Certificado Raíz no pertenece al MIC,,,152
+0007,,AA07,No existe la extensión del RUC del emisor en el certificado,,,152
+0100,R,AB01,Fallo de schema XML del área de datos,,150,153
+0101,R,AB02,Fallo de schema: no existe el campo raíz esperado para el mensaje,,150,153
+0102,R,AB03,Fallo de schema: no existe el atributo versión pa ra el campo raíz esperado para el mensaje,,150,153
+0104,R,AB05,Existe algún namespace diferente del namespace estándar del DE,,150,153
+0105,R,AB06,"Existe(n) carácter(es) de edición en el inicio o en el final del mensaje, o entre los campos XML",,150,153
+0106,R,AB07,Utilizado prefijo en el namespace,,150,153
+0107,R,AB08,Utilizada codificación diferente de UTF-8,,150,153
+0120,,AC01,Certificado inválido,,,153
+0122,,AC03,No existe la extensió n del RUC en el certificado,,,153
+0123,,AC04,Cadena de certificación inválida,,,153
+0125,R,AC06,Certificado de firma revocado,,,154
+0126,R,AC07,Certificado raíz no corresponde al MIC,,,154
+0140,,AD01,Firma difiere del estándar,,,154
+0141,,AD02,Valor de la firma  (SignatureValue) diferente del calculado por el PKI,,,154
+0142,R,AD03,RUC del certificado utilizado para firmar no pertenece al Contribuyente emisor,,,154
+0160,R,AE01,XML malformado,,,154
+0161,R,AE02,Servidor de proce samiento momentáneamente sin respuesta,,,154
+0162,R,AE03,"Servidor de procesamiento paralizado, sin tiempo de regreso",,,154
+0163,R,AE04,Versión del formato del WS no soportada,,,154
+0180,R,AF01,Elemento deHeaderMsg inexistente en el SOAP Header,,,155
+0260,N,BC01,Autorización del DE satisfactoria,,,155
+0270,R,BD01,Mensaje de da tos de entrada del WS siRecepLoteDE superior a 10.000 KB.,,,156
+0300,A,BF01,Lote recibido con éxito,,,156
+0301,R,BF02,Lote no encolado para procesamiento,,,156
+0340,,BH01,RUC del certificado de conexión no autorizado a consultar el lote,,,157
+0360,R,BI01,Lote inexistente,,,157
+0361,R,BI02,Lote en procesamiento,,,157
+0362,A,BI03,Procesamiento de lote concluido,,,157
+0363,R,B104,Lotes con tipos distintos de DE,,,157
+0420,,BL01,CDC inexistente,,,158
+0421,,BL02,CDC Encontrado,,,158
+0500,,BO01,RUC inexistente,,,158
+0501,,BO02,RUC no tiene permiso para utilizar el WS,,,158
+0502,,BO03,Éxito en la consulta,,,159
+0600,A,BU01,Evento registrado correctamente,,,159
+1000,R,A002,CDC no correspondiente con las informaciones del XML,"El CDC no es com patible con las informaciones de los campos del XML (C002, D101, D102, C005, C006, C007, D103, D002, B002, B004, A003)",,160
+1001,R,A002a,CDC duplicado,Ya fue autorizado otro documento con coincidencia simultánea de contenido de los campos del CDC,,160
+1002,,A002b,Documento electrónico duplicado,,,160
+1003,R,A003,DV del CDC inválido,Valor incor recto del dígito verificador informado según algoritmo módulo 11,,160
+1004,R,A004a,La fecha y hora de la firma digital es adelantada,La fecha y hora de la firma digital no debe ser posterior a la fecha y hora de SIFEN,,160
+1005,,A004b,Transmisión extemporánea del DE,,,160
+1049,,A002,1000 A004b,Campos firmados del Documento Electrónico  (A001- A099),,149
+1050,R,B002,Tipo de emisión inválido en esta etapa,El tipo de emisión en contingencia (B002=2) no permitida en esta etapa,,161
+1051,R,B003,Descripción del tipo de e misión no corresponde al código,Descripción del tipo de emisión no coincidente a lo informado en el campo B002,,161
+1099,,B002,1050 B003,,,149
+1100,R,C003,Descripción del tipo de documento electrónico no corresponde al código,Descripción del tipo de documento electrónico no coincidente a lo informado en el campo C002,,161
+1101,R,C004,Número de timbrado inválido,Número de timbrado no corresponde al RUC ni al Tipo de Documento electrónico del contribuyente emisor,,161
+1102,R,C004a,Número de timbrado no corresponde al medio de generación para facturación electrónica,Medio de gene ración incorrecto en el sistema de Timbrado de Marangatu,,161
+1103,R,C004b,El número de timbrado no se encuentra vigente a la fecha de emisión del comprobante,Número de timbrado no vigente (D002 no se encuentre dentro del rango de las fechas de inicio y fin  de vigencia del timbrado (C008 - C009),,161
+1104,R,C004c,El número de timbrado informado no se encuentra en estado ACTIVO,El número de timbrado informado no se encuentra activo en la base de datos de timbrado en la fecha de emisión del DE (D002),,161
+1105,R,C005,Código de establecimiento incorrecto,El código de establecimiento no corresponde al timbrado autorizado para el contribuyente,,161
+1106,R,C006,Código de punto de expedición incorrecto,El código de punto de expedición no corresponde al timbrado autorizado para el contribuyente,,161
+1107,R,C008,Fecha de inicio de vi gencia del timbrado incorrecta,Fecha de inicio de vigencia del timbrado no corresponde a la fecha de inicio de vigencia del timbrado autorizado para el contribuyente,,162
+1108,R,C009,Fecha fin de vigencia del timbrado incorrecta,Fecha fin de vigencia  del timbrado no corresponde al timbrado autorizado para el contribuyente,,162
+1109,R,C007,Número de documento ha sido inutilizado anteriormente,"El núme ro de documento que pertenece al número de Timbrado, establecimiento y punto de expedición, se encuentra inutilizado",,162
+1110,,C010,Serie informada incorrecta,,,162
+1149,,C003,1100 C009,Campos de datos del Timbrado  (C001 - C099),,149
+1151,R,D002f,La fecha y hora de emisión del DE informada es inválida por envío adelantado,"Cuando la fecha y hora de emisión del DE es posterior a la fecha y hora de transmisión al SIFEN, la diferencia no debe ser mayor a 120 horas (5 días)",,163
+1156,R,D002a,Fecha y hora de emisión del DE es anterior a la fecha de lanzamiento del sistema,La fecha y hora de emisi ón del DE debe ser posterior al 22 de noviembre del 2018,,163
+1199,,D002,1150 D002e,Campos generales del Documento Electrónico  (D001 – D299),,149
+1202,,D011,Tipo de transacción no in formado para el documento electrónico seleccionado,,,163
+1203,R,D012,Descripción del tipo de transacción no corresponde al código,Descripción del tipo de transacción no coincidente con lo informado en el campo D011,,163
+1204,R,D013,Tipo de impuesto afectado no informado,Es obligatorio informar el tipo de impuesto afectado para Factura Electrónica y Autofactura Electrónica. Obligatorio si C002=1 o 4,,163
+1205,R,D014,La descripción del tipo de impuesto afe ctado no corresponde al código,Descripción del tipo de impuesto afectado no coincidente con lo informado en el campo D013,,163
+1206,R,D016,Descripción de la moneda de la operación no corresponde al código,Descripción de la moneda de la operación no coi ncidente con lo informado en el campo D015,,164
+1207,R,D017,Condición del tipo de cambio no informada,"Si la moneda de la operación es distinta a PYG (D015≠PYG), es obligatorio informar la condición del tipo de cambio (D017)",,164
+1208,R,D017a,Condición del tipo de cambio no requerida,"Si la moneda de la operación es igual a PYG (D015=PYG), la condición del tipo de cambio (D017) no debe ser informada",,164
+1209,R,D018,Tipo de cambio de la operación no informado,"Si la condición del tipo de cambio es global (D017=1), es obligatorio informar el tipo de cambio de la operación (D018)",,164
+1210,,D018a,Tipo de cambio de la operación no requerido,,,164
+1211,R,D020,Descripción de la condición del anticipo no corresponde al código,Descripción del tipo de la condición del anticipo no coincidente con lo informado en el campo D019,,164
+1249,,D010,1200 D020,Campos inherentes a la operación comercial  (D010- D099),,149
+1250,R,D101,RUC del emisor inexistente,El RUC informado no existe en la base de datos,,164
+1251,R,D101a,RUC del Emisor inhabilitado para facturación electrónica,RUC no se encuentra habilitado para facturación electrónica  en Marangatu,,164
+1252,,D101b,El RUC del emisor se encuentra inactivo,,,164
+1253,R,D102,Dígito Verificador del RUC del emisor incorrecto,El Dígito Verificador ingresado no corresponde al módulo 11 del RUC,,164
+1254,R,D112,Descripción del departam ento de emisión no corresponde al código,Descripción del departamento de emisión no coincidente con lo informado en el campo D111,,165
+1255,R,D111,"El Departamento, el Distrito y la Ciudad de emisión no están relacionados","Debe haber relación entre el departamento (D111), el distrito (D113) y la ciudad (D115)",,165
+1256,R,D114,Es obligatorio indicar la descripción del código de distrito de emisión,"Si se informa el código del distrito de emisión (D113), es obligatorio informar la descripción del mismo (D114)",,165
+1257,R,D114a,Descripción del distrito de emisión no corresponde al código,Descripción del distrito de emisión no coincidente con lo informado en el campo D113,,165
+1258,R,D115,La ciudad de emisión no corresponde al departamento seleccionado,El código de la ciudad de emisión (D115) debe corresponder al departamento seleccionado (D111),,165
+1259,R,D115a,La ciudad de emisión no corresponde al distrito seleccionado,El código de l a ciudad de emisión (D115) debe corresponder al distrito seleccionado (D113) No se aplica esta regla si no ha sido informado el distrito,,165
+1260,R,D116,Descripción de la ciudad de emisión no corresponde al código,Descripción de la ciudad de emisión no coincidente con lo informado en el campo D115,,165
+1261,R,D131,Código de actividad económica incorrecto,La actividad económica seleccionada no corresponde a lo declarado en el RUC,,165
+1262,R,D132,Descripción de la actividad económica no corresponde al código,Descripción de la  actividad económica no coincidente con lo informado en el campo D120,,165
+1263,,D105,Nombre o razón social del emisor del DE inválido,,,165
+1264,R,D101c,RUC del emisor no está habilitado para utilizar este tipo de servicio,RUC del emisor no está habilitado para utilizar el servicio síncrono,,164
+1299,,D101,1250 D116,Campos que identifican al emisor del Documento Electrónico (D100 - D129),,149
+1300,,D202,El tipo de operación no compatible con la naturaleza del receptor,,,166
+1301,R,D204,Descripción del país receptor no corresponde al código,La descripción del país del receptor no coincidente con lo informado en el campo D203,,166
+1302,R,D205,Es obligatorio informar el tipo de contribuyente receptor,Si la naturaleza del receptor es contribuyente (D201=1) el tipo de contribuyente receptor debe ser informado,,166
+1303,R,D205a,Tipo de contribuyente receptor inválido,"Si la naturaleza del receptor es NO contribuyente (D201=2), el tipo de contribuyente receptor (D205) no debe ser informado",,166
+1304,R,D206,Es obligatorio informar el RUC del receptor contribuyente,"Si la naturaleza del receptor es contribuyente (D201=1), el RUC del receptor debe ser informado",,166
+1305,R,D206a,RUC del receptor no requerido,"Si la naturaleza del receptor es NO contribuyente (D201=2), el RUC del receptor (D206) no debe ser informado",,166
+1306,R,D206b,RUC del receptor inexistente en la base de datos de Marangatu,El RUC informado no existe en la base de datos de Marangatu,,166
+1307,,D206c,El RUC se encuentra inactivo para el tipo de contribuyente receptor,,,167
+1308,,D206d,El RUC del receptor se encuentra inactivo para el tipo de operación,,,167
+1309,R,D207,Dígito Verificador del RUC del receptor incorrecto,El Dígito Verificador ingresado no corresponde al módulo 11 del RUC,,167
+1310,R,D208,Es obligatorio informar el tipo de documento de identidad del receptor,"Si la naturaleza del receptor es NO contribuyente (D201=2) y el tipo de operación es diferente a B2F (D202≠4), el tipo de documento de identidad debe ser informado",,167
+1311,R,D208a,Tipo de documento de identidad del receptor inválido,"Si la naturaleza del receptor es contribuyente (D201=1), el tipo de documento de identidad del receptor (D208) no debe ser informado",,167
+1312,R,D209,Descripción del tipo de documento de ident idad del receptor no informada,"Si se informa el código de tipo de documento de identidad (D208), es obligatorio indicar la descripción correspondiente",,167
+1313,R,D209a,Descripción del tipo de documento de identidad del receptor no corresponde al código,La descripción del tipo de documento de identidad del receptor no coincidente con lo informado en el campo D208,,168
+1314,R,D210,Es obligatorio informar el número de documento de identidad del receptor,"Si la naturaleza del receptor es NO contribuyente (D201=2) y el tipo de operación es diferente a B2F (D202≠4), el número de documento de identidad debe ser informado",,168
+1315,R,D201,Naturaleza del Receptor inválida pa ra el tipo documento electrónico,"Si el tipo de documento es Autofactura (C002 =4), la naturaleza del Receptor debe ser Contribuyente (D201=1)",,166
+1316,R,D202a,El tipo de  operación no compat ible con el tipo documento electrónico,"Si la transacción se documenta con Autofactura (C002=4), el tipo de operación debe ser B2C (D202=2)",,166
+1317,R,D206e,RUC del Receptor inválido para el tipo de documento electrónico,"Si el tipo de documento es Autofactura (C002 =4), el RUC del Receptor deber ser el mismo que el RUC del Emisor (D206= D101)",,167
+1318,R,D213,Dirección del receptor no informado para el tipo de documento electrónico,"Si el tipo de documento electrónico informado es Nota de remisión electrónica (C002=7) o cuando el tipo de operación es B2F (D202=4), es obligatorio informar la dirección del receptor (D213)",,168
+1319,,D208b,Tipo de documento de identidad del receptor incorrecto para el tipo de operación,,,167
+1320,,D203,Código de país del receptor inválido para el tipo de operación informado,,,166
+1322,R,D208d,El tipo de documento de identidad del receptor no es requerido,"Si la naturaleza del receptor es Contribuyente (D201=1) o el tipo de operación es igual a B2F (D202=4), el tipo de documento de identidad no debe ser informado",,167
+1323,R,D210a,El número de documento de identidad del receptor no es requerido,"Si la naturaleza del receptor es contribuyente (D201=1) o el tipo de operación es igual a B2F (D202=4), el número de documento de identidad no debe ser informado",,168
+1324,R,D219,Es obligatorio informar el departamento del receptor,"Cuando se informa la dirección del receptor (D213) y el tipo de operación es distinto a B2F (D202≠4), es obligatorio informar el departamento (D219)",,168
+1325,R,D220,Descripción del departamento de emisión no corresponde al código,Descripción del departamento de emisión no coincidente con lo informado en el campo D219,,168
+1326,R,D222,Descripción del distrito de emisión no corresponde al código,Descripción del distrito de emisión no coincidente con lo informado en el campo D221,,168
+1327,,D223,Es obligatorio informar la ciudad del receptor,,,168
+1328,R,D223a,"El Departamento, el Distrito y la Ciudad del receptor no están relacionados","Debe haber relación entre el departamento (D219), el distrito (D221) y la ciudad (D223)",,168
+1329,R,D224,Descripción de l a ciudad de emisión no corresponde al código,Descripción de la ciudad de emisión no coincidente con lo informado en el campo D223,,168
+1330,R,D218,Es obligatorio informar el número de casa del receptor,Si se informa la dirección del receptor (D213) es obligatorio informar el número de casa (D218),,168
+1349,,D201,1300 D224,Datos que identifican al receptor del Documento Electrónico DE (D200 - D299),,149
+1351,R,E010a,Grupo de campos que componen la FE no requerido,"Si el tipo de documento electrónico informado es distinto a FE (C002≠1), el grupo de campos que componen la FE (E010) no debe ser informado",,169
+1352,R,E012,Descripción del indicador de presencia no corresponde al código,La descripción del indicador de presencia no coincidente con lo informado en el campo E011,,169
+1399,,E010,1350 E012,Campos que componen la Factura Electrónica FE (E010- E099),,149
+1400,R,E020,Grupo de informaciones de Compras Públicas es obligatorio,El grupo de informaciones de Compras Públicas es obligatorio para tipo de operación B2G (D202=3),,169
+1401,R,E020a,Grupo de informaciones de Compras Públicas no requerido para el tipo de operación,El grupo de informac iones de Compras Públicas solo es permitido para tipo de operación B2G (D202=3),,169
+1402,R,E025,Fecha de emisión del código de contratación inválida,La fecha de emisión del código de contratación (E025) no puede ser superior a la fecha de emisión (D202) de la Factura Electrónica,,169
+1449,,E020,1400 E025,Campos de informaciones de Compras Públicas (E020- E029),,149
+1452,R,E402,Descripción del motivo de emisión no corresponde al código,Descripción del motivo de emisión de la Nota de Crédito/Débito Electrónica no coincidente con lo informado en el campo E401,,171
+1499,,E400,1450 E402,Campos que componen la Nota Crédito/Débito Electrónica NCE - NDE (E400- E499),,149
+1502,R,E602,Descripción de la condición de la operación no corresponde al código,Descripción de la condición de la operación no coi ncidente con lo informado en el campo E601,,172
+1503,R,E601,Condición de la operación inválida para el tipo de documento electrónico,Si el tipo d e documento es Autofactura Electrónica (C002=4) es obligatorio que la condición de la operación sea al contado (E601=1),,172
+1549,,E600,1500 E602,Campos qu e describen la condición de la operación (E600– E699),,149
+1553,,E606,Tipo de pago inválido,,,173
+1554,R,E607,Descripción del tipo de pago no corresponde al código,Descripción del tipo de pago no coincidente con lo informado en el campo E606,,173
+1555,R,E610,Descripción de la moneda no corresponde al código,Descripción de la moneda por tipo de pago no coincidente con lo informado en el campo E609,,173
+1556,R,E611,Tipo de cambio no informado para la moneda por tipo de pago seleccionada,"Si la moneda por tipo de pago es distinta a guaraníes (E609≠PYG), es obligatorio informar el tipo de cambio por tipo de pago (E611)",,173
+1557,R,E611a,Tipo de cambio informado es inválido para la moneda por tipo de pago seleccionada,"Si la moneda por tipo de pago es igual a guaraníes (E609=PYG), el tipo de cambio por tipo de pago (E611) no debe existir",,173
+1599,,E605,1550 E611a,,,149
+1602,R,E622,Descripción de la denominación de la tarjeta no corresponde al código,Descripción de la denominación de la tarjeta (E622) no coincidente con lo informado en el campo (E621),,173
+1603,R,E623,RUC de la procesadora de tarjeta inexistente,RUC de la procesadora de tarjeta (E623) inexistente en la base de datos de Marangatu,,173
+1604,R,E624,Digito verificador del RU C de la procesadora de tarjeta es inexistente,El Dígito verificador ingresado (E624) no corresponde al módulo 11 del RUC,,174
+1649,,E620,1600 E624,,,149
+1699,,E630,1650 E630a,,,149
+1700,R,E640,Grupo de los campos que descr iben la forma de pago a crédito es obligatorio,"Si la condición de la operación seleccionada es igual a Crédito (E601=2), es obligatorio informar el grupo de los campos que describen la operación a crédito (E640)",,174
+1701,R,E640a,Grupo de los campos que de scriben la forma de pago a crédito no requerido,"Si la condición de la operación seleccionada es distinta a Crédito (E601≠2), el grupo de los campos que describen la operación a crédito (E640) no debe ser informado",,174
+1702,R,E642,Descripción de la condici ón de la operación a crédito no corresponde al código,Descripción de la condición de la operación a crédito no coincidente con lo informado en el campo E641,,174
+1703,R,E643,Plazo del crédito es obligatorio,"Si la condición de la operación a crédito seleccionada es igual a Plazo (E641=1), es obligatorio informar el plazo del crédito (E643)",,174
+1704,R,E643a,Plazo del crédito no requerido,"Si la condición de la operación a crédito seleccionada es distinta a Plazo (E641≠1), el plazo del crédito (E643) no debe ser informado",,174
+1705,R,E644,Cantidad de cuotas es obligatorio,"Si la condición de la operación a crédito seleccionada es igual a Cuota (E641=2), es obligatorio informar la cantidad de cuotas (E644)",,174
+1706,R,E644a,Cantidad de cuotas no requerida,"Si la condición de la operación a crédito seleccionada es distinta a Cuota (E641≠2), la cantidad de cuotas (E644) no debe ser informada",,175
+1749,,E640,1700 E644a,Campos que describen la operación a crédito (E640- E649),,149
+1750,R,E650,Grupo de los campos que describen las cuotas es obligatorio,"Si la condición de la operación a crédito seleccionada es igual a Cuota (E641=2), es obligatorio informar el grupo de los campos que describen las cuotas (E650)",,175
+1751,R,E650a,Grupo de los campos que describen las cuotas no requerido,"Si la condición de la operación a crédito seleccionada es distinta a Cuota (E641≠2), el grupo de los campos que describen las cuotas (E650) no debe ser informado",,175
+1799,,E650,1750 E650a,Campos que describen las cuotas (E650- E659),,150
+1800,R,E704,Código de DNCP - Nivel General es obligatorio para el tipo de operación B2G,"Si el tipo de operación seleccionado es igual a B2G (D202=3), es obligatorio informar el Código DNCP – Nivel General (E704)",,175
+1801,R,E705,Código de DNCP – Nivel Específico es obligatorio,Si se informa el Código de DNCP – Nivel General (E704) es obligatorio informar el código de DNCP – Nivel Específico (E705),,175
+1802,R,E710,Descripción de la unidad de medida no corresponde al código,Descripción de la unidad de medida no coincidente con lo informado en el campo E709,,175
+1804,R,E713,Descripción del país de origen del producto no corresponde al código,Descripción del país de origen del producto no coincidente con lo informado en el campo E712,,175
+1849,,E704,1800 E717,Campos que describen los ítems de la operación (E700- E899),,150
+1850,,E720,"Grupo de los campos que describen los precios, descuentos y valor total por ítem es obligatorio",,,176
+1851,,E720a,"Grupo de los campos que describen los precios, descuentos y valor total por ítem no requerido",,,176
+1852,R,EA003,Porcentaje de descuento particular por ítem no informado,"Si se informa el campo de descuento por ítem (EA002) con un monto superior a 0 (cero), es obligatorio indicar el porcentaje respectivo",,177
+1853,,EA008,Error en el cálculo del valor total de la operación por ítem,,,177
+1854,R,E725,Tipo de cambio por ítem no informado,Si la condición del tipo de cambio es Por ítem (D017=2) es obligatorio informar el tipo de cambio,,176
+1855,R,E725a,Tipo de cambio por ítem no requerido,"Si la condición del tipo de cambio es Global ( D017=1), el tipo de cambio por ítem no debe ser informado",,176
+1856,R,E725b,La moneda de la operación seleccionada no requiere tipo de cambio por ítem,"Si la moneda de la operación (D015) es igual a PYG, el tipo de cambio por ítem (E725) no debe existir",,176
+1857,R,EA009,Valor total de la operación por ítem en guaraníes no informado,"Si se informa e l tipo de cambio por ítem (E725), el valor total de la operación por ítem en guaraníes es obligatorio",,177
+1858,R,EA009a,Error en el cálculo del valor total de la operación por ítem en guaraníes,Cálculo del valor total de la operación por ítem en guaraníes  incorrecto EA009 debe corresponder al cálculo aritmético EA008 * E725,,177
+1859,R,E727,Error en el cálculo del valor total bruto de la operación por ítem,Cálculo del valor total bruto de la operación por ítem incorrecto E727 debe corresponder al cálculo aritmético E721 * E711,,176
+1861,,EA003a,Error en el cálculo del porcentaje de descuento particular por ítem,,,177
+1899,,E720,1850 E727,"Campos que describen el precio, tipo de cambio y valor total de la operación por ítem (E720- E729)",,150
+1900,,E730,Grupo de los campos que describen el IVA de la operación es obligatorio,,,178
+1903,R,E732,Descripción de la forma de afectación tributaria del IVA no corresponde al código,Descripción de la forma de afectación tributaria del IVA coincidente con lo informado en el campo E731,,178
+1904,R,E733,Proporción gravada del IVA incorrecta para forma de afectación Gravado IVA,"Si la forma de afectación tributaria del IVA informada es Gravado IVA (E731=1), la proporción gravada del IVA debe ser igual a 100 (cien)",,178
+1905,R,E733a,Proporción gravada del IVA incorrecta para forma de afectación Exonerado o Exento,"Si la forma de afectación tributaria del IVA informada es Exonerado o Exento (E731=2 o 3), la proporción gravada del IVA debe ser igual a 0 (cero)",,178
+1906,R,E733b,Proporción gravada del IVA incorrecta para forma de afectación Gravado Parcial,"Si la forma de afectación tributaria del IVA informada es Gravado parcial (E731=4), la proporción gravada del IVA debe ser inferior a 100 (cien) y superior a 0 (cero)",,178
+1907,R,E734,Tasa del IVA  es incorrecta para forma de afectación Exonerado o Exento,"Para la forma de afectación tributaria Exonerado o Exento (E731=2 o 3), la tasa del IVA informada (E734) debe ser igual a 0 (cero)",,178
+1908,R,E734a,Tasa del IVA es incorrecta para la forma de afectación Gravado IVA o Gravado parcial,"Para la forma de afectación tributaria Gravado IVA  o Gravado parcial (E731=1 o 4), la tasa del IVA informada (E734) debe ser igual a 5 (cinco) o 10 (diez)",,178
+1910,R,E735a,Error en el cálculo de la base gravada del IVA por ítem para tasa del 5%,"Cálculo de la base gravada del IVA por ítem incorrecto Si E734 = 5 este campo es igual al resultado del cálculo   [EA008* (E733/100)] / 1,05",,179
+1911,R,E735b,Error en el cálculo de la base gravada del IVA por ítem para tasa del 10%,"Cálculo de la base gravada del IVA por ítem incorrecto Si E734 = 10 este campo es igual al resultado del cálculo  [EA008 * (E733/100)] / 1,1",,179
+1999,,E730,1900 E736a,Campos que describen el IVA de la operación (E730- E739),,150
+2049,,E740,2000 E745,Campos que describen el ISC de la operación  (E740- E749),,150
+2050,R,E822,Fecha de inicio de ciclo es obligatorio,La fecha de inicio del ciclo (E812) es obligatoria si se informa el campo E811,,179
+2051,R,E822a,Fecha de inicio de ciclo no requerida,"Si NO se informa el campo E811, la fecha de inicio de ciclo no debe ser informada",,179
+2052,R,E823,Fecha de fin de ciclo es obligatoria,La fecha de fin de ciclo (E813) es obligatoria si se informa la fecha de inicio de ciclo (E812),,179
+2053,R,E823a,Fecha de fin de ciclo no requerida,"Si NO se informa el campo E812, la fecha de fin de ciclo no debe ser informada",,179
+2054,R,E823b,Fecha de fin de ciclo inválida,La fecha de fin de ciclo (E813) debe ser mayor o igual a la fecha de inicio de ciclo (E812),,179
+2055,R,E824,Fecha de vencimiento del pago es retrasada,La fecha de vencimiento para el pago no debe ser anterior a la fecha de emisión del DE (D002),,179
+2099,,E822,2050 E824,Campos de datos adicionales de uso comercial  (E820- E829),,150
+2100,R,E900,Grupo de los campos que describen el transporte de las mercaderías es obligatorio,"Si el tipo de documento electrónico seleccionado es igual Nota de Remisión Electrónica (C002=7), es obligatorio informar el grupo de campos que describen el transporte de las mercaderías",,180
+2102,R,E901,Tipo de transporte no informado,Es obligatorio informar el tipo de transporte (E901) para operaciones con Nota de Remisión Electrónica (C002 = 7),,180
+2103,R,E902,Descripción del tipo de transporte no corresponde al código,Descripción del tipo de transporte (E902) no coincidente con lo informado en el campo E901,,180
+2104,R,E904,Descripción de la modalidad de transporte no corresponde al código,Descripción de la modalidad de transporte (E904) no corresponde a lo informado en el campo E903,,180
+2107,R,E909,Fecha estimada de inicio de traslado no informada,Es obligatorio informar la fecha estimada de inicio de traslado (E909) para el tipo de documento electrónico seleccionado  (C002=7),,180
+2108,R,E909a,Fecha estimada de inicio de traslado es antigua,"Si se informa la fecha estimada de inic io de traslado (E909), ésta debe ser posterior a fecha en producción de SIFEN",,180
+2109,R,E910,Fecha estimada de fin de traslado no informada,Es obligatorio informar la fecha estimada de fin de traslado (E910) para el tipo de documento electrónico seleccionado (C002= 7),,180
+2110,R,E910a,Fecha estimada de fin de traslado es inválida,"Si se informa la fecha estimada de fin de traslado (E910), ésta debe ser igual o mayor a la fecha estimada de inicio de traslado (E908)",,180
+2112,R,E912,Descripción del país de destino no informada,"Si se informa el código  de país de destino (E911), es obligatorio indicar la descripción del país de destino (E912)",,180
+2113,R,E912a,Descripción del país de destino no corresponde al código,Descripción del país de destino (E912) no co incidente con lo informado en el campo E911,,180
+2149,,E900,2100 E912a,,,150
+2150,,E920,Grupo de los campos que identifican el local de salida de las mercaderías es obligatorio,,,181
+2152,R,E926,Descripción del departamento del local de salida no corresponde al código,Descripción del departamento del local de salida no coincidente con lo informado en el campo E925,,181
+2153,R,E925,"El Departamento, el Distrito y Ciudad del local de Salida no están relacionados","Debe haber relación entre el departamento (E925), el distrito (E927) y la ciudad (E929)",,181
+2154,R,E928,Descripción del código de distrito del local de salida no informada,"Si se informa el código del distrito del local de salida (E927), la descripción del mismo es obligatoria",,181
+2155,R,E928a,Descripción del distrito del local de salida no corresponde al código,Descripción del distrito del local de salida no coincidente con lo informado en el campo E927,,181
+2156,R,E929,La ciudad del local de salida no corresponde al departamento seleccionado,El código de la ciudad del local de salida (E929) debe corresponder al departamento seleccionado (E925),,181
+2157,R,E929a,La ciudad del local de salida no corresponde al distrito seleccionado,El código de la ciudad del local de salida (E929) debe corresponder al distrito seleccionado (E927) No se aplica esta regla si no ha sido informado el distrito,,181
+2158,R,E930,Descripción de la ciudad del local de salida no corresponde al código,Descripción de la ciudad del local de salida no coincidente con lo informado en el campo E929,,181
+2199,,E920,2150 E930,Campos que identifican el local de salida de las mercaderías (E920- E939),,150
+2200,R,E940,Grupo de los campos que identifican el local de entrega de las mercaderías es obligatorio,"Si e l tipo de documento electrónico seleccionado es Nota de Remisión Electrónica (C002=7), es obligatorio informar el grupo de los campos que identifican el local de entrega de las mercaderías",,182
+2202,R,E946,Descripción del departamento del local de entrega no corresponde al código,Descripción del departamento del local de entrega no coincidente con lo informado en el campo E945,,182
+2203,R,E945,"El Departamento, el Distrito y la Ciudad del local de entrega no están relacionados","Debe haber relación entre el departamento (E945), el distrito (E947) y la ciudad (E949)",,182
+2204,R,E948,Descripción del código del distrito del local de la entrega no informada,"Si se informa el código del distrito del local de entrega (E947), la descripción del mismo es obligatoria",,182
+2205,R,E948a,Descripción del distrito del local de entrega no corresponde al código,Descripción del distrito del local de entrega no coincidente con lo informado en el campo E947,,182
+2206,R,E949,La ciudad del local de entrega no corresponde al departamento seleccionado,El código de la ciudad del local de entrega (E949) debe corresponder al departamento seleccionado (E945),,182
+2207,R,E949a,La ciudad del local de entrega no corresponde al distrito seleccionado,El código de la ciudad del local de entrega (E949) debe corresponder al distrito seleccionado (E947) No se aplica esta regla si no ha sido informado el distrito,,182
+2208,R,E950,Descripción de la ciudad del local de entrega no corresponde al código,Descripción de la ciudad del local de entrega no coincidente con lo informado en el campo E949,,182
+2249,,E940,2200 E950,,,150
+2250,,E960,Grupo de los campos que identifican el vehículo de traslado de las mercaderías es obligatorio,,,182
+2252,R,E966,Número de vuelo no informado,Se requiere número de vuelo para la modalidad de transporte seleccionada (E903 = 3),,183
+2253,R,E966a,Número de vuelo no requerido,Si la modalidad de transporte seleccionada  es distinta a Aéreo (E903 ≠ 3) el número de vuelo (E965) no debe ser informado,,183
+2254,R,E965,Número de matrícula del vehículo no informado,Se requiere número de matrícula del vehículo cuando el tipo de identificación del vehículo es 2 (E967=2),,183
+2255,R,E963,Tipo de identificación del vehículo no informado,Se requiere el número de identificación del vehículo cuando el tipo de identificación del vehículo es 1 (E967=1),,183
+2299,,E960,2250 E966a,Campos que identifican el vehículo de traslado de mercaderías (E960- E979),,150
+2302,R,E983,RUC del transportista no informado,Se requiere informar el número de RUC si la naturaleza del transportista es igual a contribuyente (E981 = 1),,183
+2303,R,E983a,RUC del transportista inexistente,El RUC del transportista informado no existe en la base de datos de Marangatu,,183
+2304,,E983b,El RUC del transportista se encuentra inactivo,,,183
+2305,R,E983c,RUC del transportista no requerido,Si la naturaleza del transportista es distinta a contribuyente (E981≠1) el RUC del transportista (E983) no debe ser informado,,183
+2306,R,E984,Dígito Verificador del RUC del transportista incorrecto,El Dígito Verificador ingresado (E984) no corresponde al módulo 11 del RUC,,183
+2307,R,E985,Tipo de documento de identidad del tra nsportista no informado,Se requiere informar el tipo de documento de identidad si la naturaleza del transportista es igual a NO contribuyente (E981=2),,184
+2308,R,E985a,Tipo de documento de identidad del transportista no requerido,Si la naturaleza del  transportista es igual a contribuyente (E981 =1) el tipo de documento de identidad del transportista (E985) no debe ser informado,,184
+2309,R,E986,Descripción del tipo de documento de identidad del transportista no informada,"Si se informa el código de tip o de documento de identidad del transportista (E985), es obligatorio indicar la descripción del mismo (E986)",,184
+2310,R,E986a,Descripción del tipo de documento de identidad del transportista no corresponde al código,Descripción del tipo de documento de id entidad del transportista (E986) no coincidente con lo informado en el campo E985,,184
+2311,R,E987,Número de documento de identidad del transportista no informado,"Si se informa el código de tipo de documento de identidad del transportista (E985), el número de dicho documento es requerido",,184
+2312,R,E989,Descripción de la nacionalidad del transportista no informada,"Si se informa el código de nacionalidad del transportista (E988), es obligatorio indicar la descripción (E989) del mismo",,184
+2313,R,E989a,Descripción de la nacionalidad del transportista no corresponde al código,Descripción de la nacionalidad del transportista (E989) no coincidente con lo informado en el campo E988,,184
+2349,,E980,2300 E989a,Campos que identifican al transportista (persona física o jurídica) (E980- E999),,150
+2352,R,F002,Subtotal de operaciones exentas de IVA no informado,"Si se informan operaciones exentas, es obligatorio reportar el subtotal de dichas operaciones  Si el campo E731=3 debe existir F002",,184
+2353,R,F002a,Cálculo del subtotal de la operación exenta incorrecto,Error en el cálculo del subtotal de la operación exenta.  Calculo debe ser igual a la suma de todas las ocurrencias de EA008 cuando E731=3,,184
+2354,R,F003,Subtotal de operaciones exoneradas de IVA no informado,"Si se informan operaciones exoneradas, es obligatorio reportar el subtotal de dichas operaciones  Si el campo E731=2 debe existir F003",,185
+2355,R,F003a,Cálculo del subtotal de la operación exonerada incorrecto,Error en el cálculo del subtotal de la operación exonerada.  Calculo debe ser igual a la suma de todas las ocurrencias de EA008 cuando E731=2,,185
+2356,,F004,Subtotal de operaciones gravadas al 5% de IVA no informado,,,185
+2357,R,F004a,Cálculo del subtotal de la operación gravada al 5% incorrecto,Error en el cálculo d el subtotal de la operación gravada al 5%. Calculo debe ser igual a la suma de todas las ocurrencias de EA008 cuando E734=5,,185
+2358,,F005,Subtotal de operaciones gravadas al 10% de IVA no informado,,,185
+2359,R,F005a,Cálculo del subtotal de la operación gravada al 10% incorrecto,Error en el cálculo del subtotal de la operación gravada al 10%. Calculo debe ser igual a la suma de todas las ocurrencias de EA008 cuando E734=10,,185
+2362,,F008,Cálculo del total de la operación incorrecto,,,185
+2363,,F009,Cálculo del total descuento por ítem incorrecto.,,,185
+2364,R,F011,Cálculo del descuento sobre el total de  la operación incorrecto,Error en el cálculo del descuento sobre el total de la operación Es la sumatoria de EA002 y EA004 de cada ítem,,185
+2365,R,F014,Cálculo del total general de la operación incorrecto.,"Error en el cálculo del total general de la operación  Cuando C002=1, 5 o 6 el cálculo debe ser igual a F008–F011–F012- F013",,185
+2367,R,F015a,Cálculo de la liquidación del IVA a la tasa del 5% incorrecto,Error en el cálculo de la liquidación del IVA a la tasa del 5%.  Calculo debe ser igual a la suma de todas las ocurrencias de E736 cuando E734=5,,186
+2369,R,F016a,Cálculo de la liquidación del IVA a la tasa del 10% incorrecto,Error en el cálculo de la liquidación del IVA a la tasa del 10%.  Calculo debe ser igual a la suma de todas las ocurrencias de E736 cuando E734=10,,186
+2370,R,F017,Es obligatorio informar la liquidación total del IVA,Liquidación total del IVA no informada.  Si existe campo F015 y/o F016 es obligatorio informar F017,,186
+2371,R,F017a,Cálculo de la liquidación total del IVA incorrecto,Error en el cálculo de la liquidación total del IVA  Calculo debe ser igual a la suma F015+F016,,186
+2373,,F018a,Cálculo total base gravada al 5% incorrecto,,,186
+2375,,F019a,Cálculo total base gravada al 10% incorrecto,,,186
+2376,R,F020,Es obligatorio informar el total de la base gravada de IVA,Total de la base gravada del IVA no informada.  Si existe campo F018 y/o F019 es obligatorio informar F020,,186
+2377,R,F020a,Cálculo del total de la base  gravada del IVA incorrecto,Error en el cálculo del total de la base gravada del IVA  Calculo debe ser igual a la suma F018+F019,,186
+2390,R,G050,Grupo generales de la carga no es permitido para el tipo de documento electrónico seleccionado,El grupo de los campos generales de la carga no es permitido para tipos de documento distintos a factura electrónica o Nota de Remisión Electrónica (C002≠1 y C002≠7),,187
+2399,,F001,2350 F023b,Campos que describen los subtotales y totales de la transacción documentada (F001- F099),,150
+2400,,H001,Documento asociado es obligatorio para el tipo de documento electrónico seleccionado,,,187
+2401,R,H003,Descripción del tipo de documento asociado no corresponde al código,Descripción del tipo de documento asociado no coincidente con lo informado en el campo H002,,189
+2402,R,H004,Número de CDC del DTE referenciado no informado,"Si el tipo de documento asociado seleccionado es igual a Electrónico (H002=1), es obligatorio informar el número de CDC del DTE referenciado",,189
+2403,R,H004a,Número de CDC del DTE referenciado inexistente,El CDC del documento asociado informado es inexistente,,189
+2404,R,H004b,El CDC informado corresponde a un DTE cancelado,El DTE referenciado se encuentra cancelado en SIFEN,,189
+2405,R,H005,Número de timbrado del documento impreso de referencia no informado,"Si el tipo de documento asociado seleccionado es ig ual a Impreso (H002=2), es obligatorio informar el número de timbrado d el documento impreso de referencia",,190
+2406,R,H006,Código de establecimiento del documento impreso de referencia no informado,"Si el tipo de documento asociado seleccionado es igual a Impreso (H002=2), es obligatorio informar el código de establecimiento del documento impreso de referencia",,190
+2407,R,H007,Código de punto de expedición del documento impreso de referencia no informado,"Si el tipo de documento asociado seleccionado es igual a Impreso (H002=2), es obligatorio informar el código de punto de expedición del documento impreso de referencia",,190
+2408,,H008,Número del documento impreso no informado,,,190
+2409,R,H009,Tipo de documento impreso no informado,"Si el tipo de documento as ociado seleccionado es igual a Impreso (H002=2), es obligatorio informar el tipo de documento impreso",,191
+2410,R,H010,Descripción del tipo de documento impreso no corresponde al código,Descripción del tipo de documento impreso no coincidente con lo informado en el campo H009,,191
+2411,R,H011,Fecha de emisión del documento impreso de referencia no informada,"Si el tipo de documento asociado seleccionado es igual a Impreso (H002=2), es obligatorio informar la fecha de emisión del documento impreso de referencia",,191
+2412,R,H012,Número de comprobante de retención no informado,"Si el tipo de pago informado es igual a Retenciones (E606=10), es obligatorio reportar número de comprobante de retención",,191
+2413,R,H013,Número de resolución de crédito fiscal no informado,"Si el tipo de transacción informado es igual a Venta de crédito fiscal (D011=12), es obligatorio reportar número de resolución de crédito fiscal",,191
+2414,,H001a,No informar el grupo de documento asociado,,,188
+2415,,H001b,Cantidad incorrecta de documento(s) asociado(s),,,188
+2416,R,H002,Tipo de documento asociado obligatorio para el tipo de documento electrónico,"Si el tipo de documento electrónico recibido  es Autofactura (C002=4), el tipo de documento asociado debe ser constancia electrónica (H002=3)",,189
+2418,R,H004c,Número de CDC no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es impreso o Constancia electrónica (H002=2 o H002=3), no se debe informar el CDC (H004)",,189
+2419,R,H005a,Número de timbrado no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es electrónico o es constancia electrónica (H002=1 o H002=3), no se debe informar el número de timbrado",,190
+2420,R,H006a,Código de establecimiento no requerido  para el tipo de documento asociado,"Si el tipo de documento asociado es electrónico o es constancia electrónica (H002=1 o H002=3), no se debe informar el código de establecimiento",,190
+2421,R,H007a,Código de punto de expedición no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es electrónico o es constancia electrónica (H002=1 o H002=3), no se debe informar el código de punto de expedición",,190
+2422,R,H008a,Número del documento no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es electrónico o es constancia electrónica (H002=1 o H002=3), no se debe informar el número de documento",,191
+2423,R,H009a,Tipo de documento impreso no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es electrónico o es constanc ia electrónica (H002=1 o H002=3), no se debe informar el tipo de documento impreso",,191
+2424,R,H010a,Descripción del tipo de documento impreso no informada,"Si se informa el tipo de documento impreso (H009), es obligatorio indicar la descripción del mismo (H010)",,191
+2426,,H014,Tipo de constancia no informado,,,191
+2427,R,H014a,Tipo de constancia no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es Electrónico o Impreso (H002=1 o H002=2), no se debe informar el tipo de constancia",,191
+2429,R,H015a,Descripción del tipo de constancia no corresponde al código,Descripción del tipo de constancia no coincidente con lo informado en el campo H014,,191
+2430,,H016,Número de constancia no informado,,,192
+2431,R,H016a,Número de constancia no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es electrónico o impreso (H002=1 o H002=2), no se debe informar el número de constancia",,192
+2432,,H017,Número de control de la constancia no informado,,,192
+2433,R,H017a,Número de control de la constancia no requerido para el tipo de documento asociado,"Si el tipo de documento asociado es electrónico o impreso (H002=1 o H002=2), no se debe informar el número de control de la constancia",,192
+2434,,H002a,Tipo de documento asociado no requerido para el tipo de documento electrónico,,,189
+2435,R,H010b,Descripción del tipo de documento impreso no requerida,"Si no se informa el tipo de documento impreso (H009), no se debe informar la descripción del mismo (H010)",,191
+2436,R,H012a,Forma de pago incorrecto para el Número de comprobante de retención,"Si se informa el Número de comprobante de retención (H012),  es necesario que la forma de pago sea igual a Retención (E606=10)",,191
+2438,,H004f,Moneda de la operación informada no coincidente con la moneda del para el documento asociado.,,,190
+2440,R,H005b,Número de timbrado no corresponde al tipo de documento asociado,"Si el tipo de documento asociado seleccionado es igual a impreso (H002=2), no se debe informar un timbrado electrónico",,190
+2449,,H001,2400 H017a,Campos que identifican al documento asociado,,150
+2450,R,I002,Certificado digital no vigente al momento de firma del DE,El certificado digital (I002) debe estar vigente (no revocado) al momento de la firma digital (A004),,192
+2459,,I002,2450 I002,,,150
+2500,R,J002,Cadena de caracteres correspondiente al código QR no es coincidente con el archivo XML,Las informaciones de la cadena de caracteres correspondiente al código QR (J002) no son coincidentes con las informa ciones de los respectivos campos del archivo XML,,192
+2501,,J002a,El hash del código QR incluido el de la cadena de caracteres es inválido,,,192
+2502,R,J002b,URL de consulta de código QR es inválida,La URL de consulta del código Q R informada en la cadena de caracteres (J002) no es correcta,,193
+2503,R,J003,Información adicional de interés para el emisor fue incluida en el DE,La información adicional de interés para el emisor no debe ser enviada a SIFEN. El campo J003 fue incluido en el XML del DE,,193
+2552,R,E311,Descripción del departamento del vendedor no corresponde al código,Descripción del departamento no coincidente con lo informado en el campo E310,,170
+2553,R,E310,"El Departamento, el Distrito y la Ciudad del vendedor no están relacionados","Debe haber relación entre el departamento (E310), el distrito (E312) y la ciudad (E314)",,170
+2555,R,E315,Descripción de la ciudad del vendedor no corresponde al código,Descripción de  la ciudad no coincidente con lo informado en el campo E314,,170
+2556,R,E318,Descripción del departamento no corresponde al código donde se realiza la transacción,Descripción del departamento no coincidente con lo informado en el campo E317,,170
+2557,R,E317,"El Departamento, el Distrito y la Ciudad donde se realiza la transacción no están relacionados","Debe haber relación entre el departamento (E317), el distrito (E319) y la ciudad (E321)",,170
+2559,R,E322,Descripción de la ciudad no corresponde al código donde se realiza la transacción,Descripción de la ciudad do nde se realiza la transacción no coincidente con lo informado en el campo E321,,170
+2561,R,E313b,Descripción del código del distrito del vendedor no  corresponde al código,Descripción del código del distrito no coincidente con lo informado en el campo E312,,170
+2562,,E304,El vendedor no debe ser contribuyente,,,170
+2599,,J002,2500 J003,Campos fuera de la Firma Digital (J001- J049),,150
+2602,R,E502,Descripción del motivo de emisión no corresponde al código,La descripción del motivo de emisión no coincidente con lo informado en el campo E501,,171
+2603,R,E504,"Descripción del responsable de la emisión de la NRE, no corresponde al código","La descripción del responsable por la emisión de la NRE, no coincide con lo informado en el campo E503",,171
+2604,R,E506,Fecha futura de emisión de la factura excede el límite permitido,"El mes de la fecha estimada de emisión de la factura, no puede ser posterior al mes de la fecha de emisión de la Nota de Remisión",,171
+2605,,E506a,Fecha futura de emisión de la fac tura no informada para el tipo de documento electrónico,,,172
+2606,R,E501,RUC del receptor no coincidente con el RUC del emisor,"Cuando el motivo de emisión es Traslado entre los locales de la empresa (E501=7), el RUC del emisor debe coincidir con el RUC del receptor (D101=D206)",,171
+2650,,E500,2600 E506,Campos que componen la Nota de Remisión Electrónica (E500- E599),,149
+4000,R,GDE005,La versión no corresponde,Versión del formato del evento ( GDE005) no corresponde  a la versión vigente,,135
+4001,,GEC002,CDC inválido,,,135
+4002,R,GEC002a,CDC no existente en el SIFEN,El identificador del CDC (GEC002) no se encuentra aprobado como DTE SIFEN,,135
+4003,R,GEC002b,CDC ya se encuentra con el mismo evento solicitado,El DTE (GEC002) ya se encuentra con un evento que se está requiriendo nuevamente (Duplicidad),,135
+4004,,GEC002c,CDC ya se ha confirmado por el receptor,,,135
+4006,R,GDE008,Firmador no autorizado para realizar evento,"El RUC del certificado utilizado para firmar los eventos sobre DE y DTE, no corresponde al emisor/electrónico",,135
+4007,R,GDE008a,Firma Digital inválida por certificado digital revocado,El certificado digital que se utilizó para firmar el evento está revocado en la fecha de firma digital (GDE004),,135
+4008,R,GDE004,Fecha de firma digital del evento inválida,La fecha y hora de firma digital del evento no puede ser posterior a la Fecha y hora de aprobación en el SIFEN,,135
+4009,,GDE004a,Plazo de solicitud de cancelación  de una FE  extemporáneo,,,135
+4010,,GDE004b,Plazo de solicitud de cancelación distinto a una FE es extemporáneo,,,135
+4051,R,GEI002,Número de timbrado inválido para el ambiente de pruebas.,Cuando en ambiente d e prueba es obligatorio el uso del timbrado de pruebas.,,136
+4052,R,GEI002a,Número de timbrado no corresponde al contribuyente,El número de timbrado no corresponde al RUC del contribuyente facturador electrónico,,136
+4053,R,GEI002b,Número de timbrado no corresponde al medio de generación,El número del timbrado no corresponde al medio de generación para factura electrónica,,136
+4054,R,GEI003,Código de establecimiento inválido para el timbrado informado,El código del establecimiento no corresponde a un timbrado d el medio de generación para facturación electrónica,,136
+4055,R,GEI004,El código del punto de expedición es inválido para el timbrado informado,El código del punto de expedición no corresponde a un timbrado autorizado para el contribuyente,,136
+4060,R,GEI007,Tipo de Documento no corresponde al Número de Timbrado,El tipo de Documento no corresponde a un número de timbrado autorizado,,136
+4065,R,GEI005,Existe DTE en el rango informado,Para el rango solicitado existe DTE en SIFEN,,136
+4066,R,GEI005a,Existe número inutilizado en el rango solicitado,Dentro del rango solicitado para inutilización existen número de DE ya inutilizados en SIFEN,,136
+4067,R,GEI006,Cantidad de números en el rango es inválida,La cantidad máxima de números en el rango debe ser menor o igual a 1000 (GEI006 – GEI005 menor o igual a 1000),,136
+4068,R,GEI006a,Número final de rango es inválido,El número del final de rango (GEI006) debe ser mayor que el número de inicio del rango (GEI005),,136
+4069,R,GDE008,Firmador no autorizado para realizar evento,El RUC del certificado utilizado para firmar los eventos no corresponde al emisor/electrónico,,136
+4070,R,GDE008a,Firma Digital inválida por certificado digital revocado,El certificado digital que se utilizó para firmar el evento está revocado en la fecha de firma digital (GDE004),,136
+4071,R,GDE004,Fecha de firma digital del evento inválida,La fecha de firma digital del evento no puede ser posterior a la Fecha de SIFEN,,136
+4101,R,GEN002b,CDC del DTE ya cuenta con un evento de esta naturaleza,Sobre el CDC de un DE/DTE se puede realizar hasta un evento de notificación - recepción,,137
+4102,R,GEN002c,CDC del DTE inválido,La estructura del CDC informado no corresponde  (Longitud y/o dígito verificador),,137
+4103,,GEN003,Fecha de emisión del DE/DTE ha superado el plazo para registro del evento,El plazo del registro del evento ha superado los 45 días contados a partir de la fecha de emisión AO,,137
+4104,R,GEN004,Fecha de Recepción debe ser mayor o igual a la fecha de emisión del DE/DTE,La fecha de emisión no puede ser mayor que la fecha de recepción del DE/DTE,,137
+4105,R,GEN007,Ruc del Receptor requerido,Es obligatorio informar Ruc del receptor cuando el tipo de receptor es Contribuyente (GEN005=1),,137
+4106,R,GEN007a,Ruc del Receptor no se debe informar,Cuando el tipo de receptor es No Contribuyente (GEN005=2) no se debe informar el campo Ruc del Receptor (GEN007),,137
+4107,R,GEN008,Dígito verificador del RUC del contribuyente receptor requerido,Es obligatorio informar DV del receptor cuando el tipo de receptor es Contribuyente (GEN005=1),,137
+4108,R,GEN008a,Dígito verificador del RUC del contribuyente receptor no se debe informar,Cuando el tipo de receptor es No Contribuyente (GEN005=2) no se debe informar el campo Dígito verificador del RUC del contribuyente receptor (GEN008),,137
+4109,R,GEN009,Tipo de documento de identidad del receptor requerido,Es obligatorio informar Tipo de documento de identidad del receptor cuando el tipo de receptor es No contribuyente (GEN005=2),,137
+4110,R,GEN009a,Tipo de documento de identidad del receptor no se debe informar,Cuando el Tipo de documento de identidad del receptor Contribuyente (GEN005=1) no se debe informar el tipo de documento de identidad del receptor (GEN009a),,138
+4111,R,GEN010,Número de documento de identidad requerido,Es obligatorio informar Número de documento de identidad cuando el tipo de receptor es No contribuyente (GEN005=2),,138
+4112,R,GEN010a,Número de documento de identidad no se debe informar,Cuando el Tipo de documento de identidad del receptor Contribuyente (GEN005=1) no se debe informar e l documento de identidad del receptor (GEN010),,138
+4150,R,GCO002,CDC del DTE ya cuenta con dos eventos de la misma naturaleza,"Sobre el CDC de un DE/DTE se puede realizar hasta dos eventos de conformidad (con formidad parcial luego una conformidad total, en ese orden)",,138
+4151,R,GCO002b,CDC del DTE inválido,La estructura del CDC informado no corresponde  (longitud y/o dígito verificador),,138
+4152,,GCO002c,CDC del DTE es inexistente o ha superado el plazo para registro del evento,,,139
+4154,,GCO004,Fecha estimada de Recepción requerida,,,139
+4200,R,GDI002,CDC del DTE ya cuenta con un evento de esta naturaleza,Sobre el CDC de un DTE se puede realizar hasta un evento de disconformidad,,139
+4201,R,GDI002b,CDC del DTE inválido,La estructura del CDC informado no corresponde  (longitud y/o dígito verificador),,140
+4202,,GDI002c,CDC inexistente o ha superado el pla zo para registro del evento,,,140
+4204,R,GDI002e,No se puede registrar la disconformidad por CDC del DTE cancelado,El CDC del DTE ya ha sido cancelado con anterioridad,,140
+4251,R,GED002b,CDC del DTE ya cuenta con un evento de esta naturaleza,Sobre el CDC de un DTE se puede realizar hasta un evento de desconocimiento,,140
+4252,R,GED002c,CDC del DTE inválido,La estructura del CDC informado no corresponde (longitud y/o dígito verificador),,140
+4253,,GED003,Fecha de emisión del DE/DTE ha superado el plazo para registro del evento,El plazo del registro del evento ha superado los 45 días contados a partir de la fecha de emisión AO,,141
+4254,R,GED004,Fecha de Recepción debe ser mayor a la fecha de emisión del DE/DTE,La fecha de emisión no puede ser mayor que la fecha de recepción del DE/DTE,,141
+4255,R,GED007,Ruc del Receptor requerido,Es obligatorio informar Ruc del receptor cuando el receptor es contribuyente (GED005=1),,141
+4256,R,GEN007a,Ruc del Receptor no se debe informar,Cuando el tipo de receptor es No Contribuyente (GED005=2) no se debe informar el campo Ruc del Receptor (GED007),,141
+4259,R,GED009,Tipo de documento de identidad del receptor requerido,Es obligatorio informar el tipo de documento de identidad del receptor cuando el tipo de rec eptor es No contribuyente (GED005=2),,141
+4260,R,GED009a,Tipo de documento de identidad del receptor no se debe informar,Cuando el Tipo de Receptor es Contribuyente (GED005=1) no es necesario informar el tipo de documento de identidad del receptor (GED009),,141
+4261,,GED010,Número de documento de identidad requerido,Es obligatorio informar el número de documento de identidad del receptor cuando el tipo de receptor es No contribuyente,,141
+4300,R,GET004,"El Departamento, el Distrito y la Ciudad del local de entrega no están relacionados","Debe haber relación entre el departamento (GET004), el distrito (GET006) y la ciudad (GET008)",,142
+4302,R,GET005,Descripción del departamento del local de la entrega es requerida,"Cuando se informa el código del departamento del local de la entrega (GET004), es obligatorio informar la descripción del departamento del local de la entrega (GET005)",,142
+4303,R,GET005a,Descripción del departamento del local de la entrega no corresponde al código,Descripción del departamento del local de la entrega no coincidente con lo informado en el campo GET004,,142
+4304,R,GET007,Descripción del distrito del local de la entrega es requerida,"Cuando se informa el código del distrito del local de la entrega (GET006), es obligatorio informar la descripción del distrito del local de la entrega (GET007)",,142
+4305,R,GET007a,Descripción del distrito del local de la entrega no corresponde al código,Descripción del distrito del local de entrega no coincidente con lo informado en el campo GET006,,142
+4307,R,GET009,Descripción de la ciudad del local de la entrega es requerida,"Cuando se informa el código de la ciudad del local d e la entrega (GET008), es obligatorio informar la descripción de la ciudad del local de la entrega (GET009)",,142
+4308,R,GET009a,Descripción de la ciudad del local de la entrega no corresponde al código,Descripción de la ciudad del local de la entrega no coincidente con lo informado en el campo GET008,,142
+4309,R,GET010,Dirección del local de la entrega requerida para el motivo Cambio del local de la entrega,"Cuando el motivo del evento es Cambio del local de la entrega (GET003=1), es obligatorio informar la di rección del local de la entrega (GET010)",,142
+4311,R,GET013,Nombre y apellido del chofer requerido para el motivo Cambio del chofer,"Cuando el motivo del evento es Cambio del chofer (GET003=2), es obligatorio informar el nombre y apellido del chofer (GET013)",,143
+4312,R,GET014,Número de documento de identidad del chofer requerido para el motivo Cambio del chofer,"Cuando el motivo del evento es Cambio del chofer (GET003=2), es obligatorio informar el número de documento de identidad del chofer (GET014)",,143
+4313,R,GET015,Naturaleza del transportista requerida para el motivo Cambio del transportista,"Cuando el motivo del evento es Cambio del transportista (GET003=3), es obligatorio informar la naturaleza del transportista (GET015)",,143
+4314,R,GET023,Descripción del tipo de transporte es requerida,"Cuando se informa el código de tipo de transporte (GET022), es obligatorio informar la descripción del tipo de transporte (GET023)",,144
+4315,R,GET023a,Descripción del tipo de transporte no corresponde al código,Descripción del tipo de transporte no coincidente con lo informado en el campo GET022,,144
+4316,R,GET024,Modalidad del transpo rte requerido para el motivo Cambio de vehículo,"Cuando el motivo del evento es cambio de vehículo (GET003=4), es obligatorio informar la modalidad del transporte (GET024)",,144
+4317,R,GET025,Descripción de la modalidad del transporte es requerida,"Cuando se informa el código de la modalidad del transporte (GET024), es obligatorio informar la descripción de la modalidad del transporte (GET025)",,144
+4318,R,GET025a,Descripción de la modalidad del transporte no corresponde al código,Descripción de la modalida d del transporte no coincidente con lo informado en el campo GET024,,144
+4319,R,GET018,Nombre o razón social del transportista es requerido para el motivo del evento,"Cuando el motivo del evento es cambio del transportista (GET003=3), es obligatorio informar el nombre o razón social del transportista (GET018)",,143
+4320,R,GET019,Tipo de documento de identidad del transportista no informado,Se requiere informar el tipo de documento de identidad si la naturaleza del transportista es igual a NO contribuyente (GET015 =2),,143
+4321,R,GET019a,Tipo de documento de identidad del transportista no requerido,Si la naturaleza del transportista es igual a contribuyente (GET015 =1) el tipo de documento de identidad del transportista (GET019) no debe ser informado,,144
+4322,R,GET020,Descripción del tipo de documento de identidad del transportista no informada,"Si se informa el código de tipo de documento de identidad del transportista (GET019), es obligatorio indicar la descripción del mismo (GET020)",,144
+4323,R,GET020a,Descripción del tipo de documento de identidad del transportista no corresponde al código,Descripción del tipo de documento de identidad del transportista (GET020) no coincidente con lo informado en el campo GET019,,144
+4324,R,GET021,Número de documento de identidad del transportista no informado,"Si se informa el código de tipo de documento de identidad del transportista (GET019), el número de dicho documento es requerido (GET020)",,144
